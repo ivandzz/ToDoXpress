@@ -116,7 +116,7 @@
 		059779422C08A353009B282F /* EmptyStates */ = {
 			isa = PBXGroup;
 			children = (
-				05C4184E2BE8EDCB00C00DC7 /* ToDoApp.swift */,
+				05B43E552C079BDB0010926C /* EmptyState.swift */,
 			);
 			path = EmptyStates;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 				0597793B2C08A234009B282F /* Models */,
 				0597793C2C08A245009B282F /* Views */,
 				05C418562BE8EDCC00C00DC7 /* Preview Content */,
-				05B43E552C079BDB0010926C /* EmptyState.swift */,
+				05C4184E2BE8EDCB00C00DC7 /* ToDoApp.swift */,
 				05C418542BE8EDCC00C00DC7 /* Assets.xcassets */,
 			);
 			path = ToDo;
