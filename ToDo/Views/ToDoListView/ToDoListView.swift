@@ -9,30 +9,37 @@ import SwiftUI
 import SwiftData
 
 struct ToDoListView: View {
+    
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \ToDo.date, order: .reverse) var allTodos: [ToDo]
     @State private var sheetIsPresented = false
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
-                List {
-                    Section(header: !undoneItems.isEmpty ? Text("ToDo") : nil) {
-                        ForEach(undoneItems) { todo in
-                            ListCell(todo: todo)
+                if !allTodos.isEmpty {
+                    VStack {
+                        SearchBar(text: $searchText)
+                            .padding(.bottom)
+                        
+                        List {
+                            Section(header: !undoneItems.isEmpty ? Text("ToDo") : nil) {
+                                ForEach(undoneItems) { todo in
+                                    ListCell(todo: todo)
+                                }
+                                .onDelete(perform: deleteUndoneItems)
+                            }
+                            
+                            Section(header: !doneItems.isEmpty ? Text("Done") : nil) {
+                                ForEach(doneItems) { todo in
+                                    ListCell(todo: todo)
+                                }
+                                .onDelete(perform: deleteDoneItems)
+                            }
                         }
-                        .onDelete(perform: deleteUndoneItems)
                     }
-                    
-                    Section(header: !doneItems.isEmpty ? Text("Done") : nil) {
-                        ForEach(doneItems) { todo in
-                            ListCell(todo: todo)
-                        }
-                        .onDelete(perform: deleteDoneItems)
-                    }
-                }
-                
-                if allTodos.isEmpty {
+                } else {
                     EmptyState()
                 }
                 
@@ -58,13 +65,13 @@ struct ToDoListView: View {
     }
     
     var undoneItems: [ToDo] {
-        allTodos.filter { !$0.isDone }
+        allTodos.filter { !$0.isDone && (searchText.isEmpty || $0.title.contains(searchText)) }
     }
-
+    
     var doneItems: [ToDo] {
-        allTodos.filter { $0.isDone }
+        allTodos.filter { $0.isDone && (searchText.isEmpty || $0.title.contains(searchText)) }
     }
-
+    
     func deleteUndoneItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
@@ -72,7 +79,7 @@ struct ToDoListView: View {
             }
         }
     }
-
+    
     func deleteDoneItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {

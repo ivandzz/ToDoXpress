@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0524D6752CDCEC4200D515B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0524D6742CDCEC4200D515B7 /* SearchBar.swift */; };
 		0542DFB72C08A40E002C64AA /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0542DFB62C08A40E002C64AA /* XDismissButton.swift */; };
 		05B43E522C078C140010926C /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B43E512C078C140010926C /* ListCell.swift */; };
 		05B43E542C0796260010926C /* AddToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B43E532C0796260010926C /* AddToDoView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0524D6742CDCEC4200D515B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		0542DFB62C08A40E002C64AA /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		05B43E512C078C140010926C /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		05B43E532C0796260010926C /* AddToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0524D6732CDCEC2D00D515B7 /* SearchBars */ = {
+			isa = PBXGroup;
+			children = (
+				0524D6742CDCEC4200D515B7 /* SearchBar.swift */,
+			);
+			path = SearchBars;
+			sourceTree = "<group>";
+		};
 		0542DFB52C08A3FF002C64AA /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		0597793E2C08A293009B282F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0524D6732CDCEC2D00D515B7 /* SearchBars */,
 				0542DFB52C08A3FF002C64AA /* Buttons */,
 				059779422C08A353009B282F /* EmptyStates */,
 				059779412C08A342009B282F /* Views */,
@@ -232,6 +243,7 @@
 				05B43E542C0796260010926C /* AddToDoView.swift in Sources */,
 				05B43E522C078C140010926C /* ListCell.swift in Sources */,
 				05B43E562C079BDB0010926C /* EmptyState.swift in Sources */,
+				0524D6752CDCEC4200D515B7 /* SearchBar.swift in Sources */,
 				05C418532BE8EDCB00C00DC7 /* ToDo.swift in Sources */,
 				05C4184F2BE8EDCB00C00DC7 /* ToDoApp.swift in Sources */,
 				0542DFB72C08A40E002C64AA /* XDismissButton.swift in Sources */,
