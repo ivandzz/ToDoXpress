@@ -3,11 +3,11 @@
 ToDoXpress is a simple and intuitive to-do list application designed to help users manage tasks efficiently. The app offers a user-friendly interface to create, edit, and delete tasks.
 
 ## 📲 Features
-1. **Task Management:** Easily add, edit, or delete tasks in the to-do list.
-2. **Sort by Status:** Tasks are automatically sorted into two categories: Done and Undone, making it easy to track progress.
-3. **Search Functionality:** A built-in search bar allows users to quickly find tasks by name.
-4. **Intuitive Interface:** A clean, simple UI built with *SwiftUI* to provide an optimal user experience.
-5. **Persistent Storage:** Tasks are stored using *SwiftData* for persistent storage, ensuring they remain available even after the app is closed.
+1. 📋 **Task Management:** Easily add, edit, or delete tasks in the to-do list.
+2. ☑️ **Sort by Status:** Tasks are automatically sorted into two categories: Done and Undone, making it easy to track progress.
+3. 🔎 **Search Functionality:** A built-in search bar allows users to quickly find tasks by name.
+4. 🖼️ **Intuitive Interface:** A clean, simple UI built with *SwiftUI* to provide an optimal user experience.
+5. 📀 **Persistent Storage:** Tasks are stored using *SwiftData* for persistent storage, ensuring they remain available even after the app is closed.
    
 ## 🚀 Getting Started
 **Prerequisites:**
@@ -21,7 +21,9 @@ git clone https://github.com/ivandzz/ToDoXpress.git
 cd ToDoXpress
 ```
 2. Run the project: <br>
-Open the project in Xcode and run the app on a simulator or a real device.
+```sh
+open ToDo.xcodeproj
+```
 
 ## 🖼️ Screenshots
 List with empty state | Add new task | List with some tasks |
@@ -30,7 +32,7 @@ List with empty state | Add new task | List with some tasks |
 
 ## 🛠️ Technology Stack
 1. **SwiftUI** - for user interface
-2. **SwiftData** - for saving user data
+2. **MVC Architecture** - organizes content and data flow efficiently
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
