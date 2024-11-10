@@ -32,7 +32,7 @@ List with empty state | Add new task | List with some tasks |
 
 ## 🛠️ Technology Stack
 1. **SwiftUI** - for user interface
-2. **MVC Architecture** - organizes content and data flow efficiently
+2. **SwiftData** - for saving user data
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
